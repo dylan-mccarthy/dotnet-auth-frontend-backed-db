@@ -1,5 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
 
+using Backend;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<AstroappContext>();
 // Add services to the container.
 
 builder.Services.AddControllers();
